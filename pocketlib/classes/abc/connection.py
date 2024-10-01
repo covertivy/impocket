@@ -1,6 +1,15 @@
 from abc import ABC, abstractmethod
-from pocketlib.classes.abc.conduit import Conduit
 
 
-class Connection(ABC, Conduit):
-    pass
+class Connection(ABC):
+    @abstractmethod
+    def connect(self):
+        pass
+    
+    @abstractmethod
+    def disconnect(self):
+        pass
+    
+    @abstractmethod
+    def reconnect(self):
+        pass
